@@ -1,0 +1,69 @@
+﻿@model FrituurApp.Models.Product
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Product</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ProductID" />
+            <div class="form-group">
+                <label asp-for="ProductName" class="control-label"></label>
+                <input asp-for="ProductName" class="form-control" />
+                <span asp-validation-for="ProductName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProductDescription" class="control-label"></label>
+                <input asp-for="ProductDescription" class="form-control" />
+                <span asp-validation-for="ProductDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProductCategory" class="control-label"></label>
+                <input asp-for="ProductCategory" class="form-control" />
+                <span asp-validation-for="ProductCategory" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProductPrice" class="control-label"></label>
+                <input asp-for="ProductPrice" class="form-control" />
+                <span asp-validation-for="ProductPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProductPhoto" class="control-label"></label>
+                <input asp-for="ProductPhoto" class="form-control" />
+                <span asp-validation-for="ProductPhoto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AdministratorID" class="control-label"></label>
+                <select asp-for="AdministratorID" class="form-control" asp-items="ViewBag.AdministratorID"></select>
+                <span asp-validation-for="AdministratorID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OrderLineID" class="control-label"></label>
+                <select asp-for="OrderLineID" class="form-control" asp-items="ViewBag.OrderLineID"></select>
+                <span asp-validation-for="OrderLineID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CustomerID" class="control-label"></label>
+                <select asp-for="CustomerID" class="form-control" asp-items="ViewBag.CustomerID"></select>
+                <span asp-validation-for="CustomerID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
