@@ -5,11 +5,11 @@ namespace FrituurApp.Models
     public class RegisterViewModel
     {
         [Required]
-        public string? Name { get; set; }
+        public string? CustomerName { get; set; }
         [Required, EmailAddress]
-        public string? Email { get; set; }
+        public string? CustomerEmail { get; set; }
         [Required]
-        public string? Password { get; set; }
+        public string? CustomerPassword { get; set; }
 
 
     }

@@ -15,21 +15,27 @@
                     <h2 class="text-pink">Registreren</h2>
                     <span class="fst-italic text-muted">Maak een account aan.</span>
                 </div>
-                <div class="mb-3">
-                    @Html.ValidationSummary()
-                </div>
-                <div class="form-floating mb-3">
-                    @Html.TextBoxFor(m => m.Name, new {@class="form-control", placeholder="Name" })
-                    <label for="Name">Naam</label>
-                </div>
-                <div class="form-floating mb-3">
-                    @Html.TextBoxFor(m => m.Email, new {@class="form-control", placeholder="Email" })
-                    <label for="Email">E-mailadres</label>
-                </div>
-                <div class="form-floating mb-3">
-                    @Html.TextBoxFor(m => m.Password, new {@class="form-control", placeholder="Password", type="Password" })
-                    <label for="Password">Wachtwoord</label>
-                </div>
+                <form asp-action="Create">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="CustomerName" class="control-label"></label>
+                        <input asp-for="CustomerName" class="form-control" />
+                        <span asp-validation-for="CustomerName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="CustomerEmail" class="control-label"></label>
+                        <input asp-for="CustomerEmail" class="form-control" />
+                        <span asp-validation-for="CustomerEmail" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="CustomerPassword" class="control-label"></label>
+                        <input asp-for="CustomerPassword" class="form-control" />
+                        <span asp-validation-for="CustomerPassword" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Registreren" class="btn btn-primary" />
+                    </div>
+                </form>
                 <div class="mb-3">
                     <button type="submit" class="btn btn-sm w-100 btn-dark p-2 shadow rounded">Registreren</button>
                 </div>

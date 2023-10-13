@@ -49,13 +49,13 @@ namespace FrituurApp.Controllers
             {
                 var user = new Customer()
                 {
-                    CustomerName = register.Name,
-                    CustomerEmail = register.Email
+                    CustomerName = register.CustomerName,
+                    CustomerEmail = register.CustomerEmail,
                 };
-                var result = await _userManager.CreateAsync(user, register.Password);
+                var result = await _userManager.CreateAsync(user, register.CustomerPassword);
                 if (result.Succeeded)
                 {
-                    await _signInManager.PasswordSignInAsync(user, register.Password, false, false);
+                    await _signInManager.PasswordSignInAsync(user, register.CustomerPassword, false, false);
                     return RedirectToAction("Index", "Home");
                 }
                 else
