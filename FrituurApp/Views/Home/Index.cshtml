@@ -4,5 +4,58 @@
 
 <div class="text-center">
     <h1 class="display-4">Welkom bij Frituur 'T Hoekje</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<div class="container">
+    <div class="row shadow rounded">
+        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <div id="carouselSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner h-100">
+                    <div class="carousel-item h-100 active">
+                        <img src="/images/carouselImages/Burger+Friet.jpg" 
+                        class="d-block w-100 h-100" alt="Product">
+                    </div>
+                    <div class="carousel-item h-100">
+                        <img src="/images/carouselImages/ChickenNuggets+Fries.jpg" 
+                        class="d-block w-100 h-100" alt="Product">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <div class="mb-3">
+                <h2>Bestel Nu <span class="text-success fst-italic">Gemakkelijk</span> En <span class="text-success fst-italic">Snel</span> Online.</h2>
+            </div>
+            <div class="mb-1 p-3">
+                <span><i class="fa-solid fa-cart-shopping text-success mx-2 fs-4"></i></span>
+                <span class="fs-5 text-dark fst-italic">Bestel Online</span>
+            </div>
+            <div class="mb-1 p-3">
+                <span><i class="fa-solid fa-credit-card text-success mx-2 fs-4"></i></span>
+                <span class="fs-5 text-dark fst-italic">Betaal Bij Afhalen</span>
+            </div>
+            <div class="mb-1 p-3">
+                <span><i class="fa-solid fa-burger text-success mx-2 fs-4"></i></span>
+                <span class="fs-5 text-dark fst-italic">Neem Uw Bestelling Mee</span>
+            </div>
+            <a asp-controller="Product" asp-action="Index">
+                <button class="button mx-2 fs-4" type="button">Bestel Online</button>
+            </a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 mb-3">
+            <h2 class="text-dark fst-italic">Onze Specials</h2>
+            <div id="onzeSpecials" class="row">
+                <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                    <div id="card productCard" class="card">
+                        <img class="card-img-top" src="" alt="product" />
+                        <div class="card-body">
+                            <p class="card-title">Schotel</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

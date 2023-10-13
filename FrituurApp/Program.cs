@@ -1,5 +1,10 @@
 using FrituurApp.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.Extensions.Options;
+using System.Data.Common;
+using FrituurApp.Models;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +14,8 @@ builder.Services.AddDbContext<AppDBContext>(
     DbContextOptions =>
     DbContextOptions.UseSqlServer(
         builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddIdentity<Customer, IdentityRole>()
+    .AddEntityFrameworkStores<AppDBContext>();
 
 var app = builder.Build();
 
@@ -24,6 +31,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+app.UseAuthentication();;
 
 app.UseAuthorization();
 

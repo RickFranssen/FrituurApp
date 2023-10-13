@@ -1,0 +1,82 @@
+﻿@{
+    ViewData["Title"] = "Producten";
+}
+<div class="container-fluid">
+    <div class="row mb-4">
+        <div class="col-12">
+            @Html.Partial("_SearchBar")
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-2">
+            <div class="shadow rounded">
+                <div class="border-bottom border-3 p-2">
+                    <h4 class="text-pink text-center text-pink">Productcategorie</h4>
+                    @Html.Partial("_SideMenu")
+                </div>
+            </div>
+        </div>
+        <div class="col-10">
+            <div class="mb-3">
+                <h4 class="text-dark">Zoek Producten</h4>
+                <div class="row" id="Product"></div>
+            </div>
+            <div class="product-container">
+            <div class="product shadow rounded">
+                <img src="/images/Producten/Frikandel.jpg" alt="Frikandel">
+                <h7>Frikandel</h7>
+                <p>€2.50</p>
+                <button class="add-to-cart" data-product="Frikandel" data-price="2.50">Toevoegen</button>
+            </div>
+
+                <div class="product shadow rounded">
+                <img src="/images/Producten/Frikandel Speciaal.png" alt="Frikandel Speciaal">
+                <h7>Frikandel Speciaal</h7>
+                <p>€3.25</p>
+                <button class="add-to-cart" data-product="Frikandel Speciaal" data-price="3.25">Toevoegen</button>
+            </div>
+                <div class="product shadow rounded">
+                    <img src="/images/Producten/Goulash Kroket.png" alt="Goulash Kroket">
+                    <h7>Goulash Kroket</h7>
+                    <p>€3.10</p>
+                    <button class="add-to-cart" data-product="Goulash Kroket" data-price="3.10">Toevoegen</button>
+                </div>
+                <div class="product shadow rounded">
+                    <img src="/images/Producten/Bamiblok.png" alt="Bamiblok">
+                    <h7>Bamiblok</h7>
+                    <p>€3.00</p>
+                    <button class="add-to-cart" data-product="Bamiblok" data-price="3.00">Toevoegen</button>
+                </div>
+                <div class="product shadow rounded">
+                    <img src="/images/Producten/Nasischijf.png" alt="Nasischijf">
+                    <h7>Nasischijf</h7>
+                    <p>€3.00</p>
+                    <button class="add-to-cart" data-product="Nasischijf" data-price="3.00">Toevoegen</button>
+                </div>
+                <div class="product shadow rounded">
+                    <img src="/images/Producten/Kipkorn.jpg" alt="Kipcorn">
+                    <h7>Kipkorn</h7>
+                    <p>€2.75</p>
+                    <button class="add-to-cart" data-product="Kipcorn" data-price="2.75">Toevoegen</button>
+                </div>
+                <div class="product shadow rounded">
+                    <img src="/images/Producten/Knakworst.png" alt="Knakworst">
+                    <h7>Knakworst</h7>
+                    <p>€2.00</p>
+                    <button class="add-to-cart" data-product="Knakworst" data-price="2.00">Toevoegen</button>
+                </div>
+            </div>
+
+            <div class="cart-dropdown" id="cart-dropdown">
+                <h2>Winkelmandje</h2>
+                <ul id="cart-items">
+                    <!-- Hier worden de toegevoegde items weergegeven -->
+                </ul>
+                <p>Totaal: <span id="cart-total">€0.00</span></p>
+            </div>
+
+            <script src="script.js"></script>
+        </div>
+    </div>
+</div>
+
