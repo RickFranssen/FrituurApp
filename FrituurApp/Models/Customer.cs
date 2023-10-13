@@ -1,8 +1,6 @@
-﻿using Microsoft.AspNetCore.Identity;
-
-namespace FrituurApp.Models
+﻿namespace FrituurApp.Models
 {
-    public class Customer:IdentityUser
+    public class Customer
     {
         public int CustomerID { get; set; }
         public string? CustomerName { get; set; }

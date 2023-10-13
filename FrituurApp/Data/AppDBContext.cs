@@ -1,11 +1,9 @@
 ﻿using FrituurApp.Models;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace FrituurApp.Data
 {
-    public class AppDBContext : IdentityDbContext<Customer>
+    public class AppDBContext : DbContext
     {
         public DbSet<Customer> Customer { get; set; }
 
