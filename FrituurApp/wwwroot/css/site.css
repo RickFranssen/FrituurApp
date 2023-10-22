@@ -69,25 +69,25 @@ header{
 }
 
 .button {
-    background-color: #0c721c; /* Groene achtergrondkleur */
-    color: white; /* Tekstkleur */
-    padding: 15px 30px; /* Binnenmarge (vergroot de knopgrootte) */
-    border: none; /* Geen rand */
-    border-radius: 10px; /* Afgeronde randen */
-    cursor: pointer; /* Cursor veranderen bij hover */
-    font-size: 18px; /* Tekstgrootte */
+    background-color: #0c721c; 
+    color: white; 
+    padding: 15px 30px; 
+    border: none; 
+    border-radius: 10px; 
+    cursor: pointer; 
+    font-size: 18px; 
 }
 
 .button:hover {
-        background-color: #45a049; /* Donkerder groene kleur bij hover */
+        background-color: #45a049; 
 }
 
-/* Stijl voor productafbeeldingen */
+
 .product img {
-    width: 150px; /* Stel de breedte in op de gewenste grootte */
-    height: 150px; /* Stel de hoogte in op de gewenste grootte */
-    object-fit: cover; /* Behoud de beeldverhouding en bedek het hele vak */
-    border-radius: 5px; /* Voeg afgeronde randen toe */
+    width: 150px; 
+    height: 150px; 
+    object-fit: cover; 
+    border-radius: 5px; 
 }
 
 .product-container {
@@ -98,7 +98,7 @@ header{
 }
 
 .product {
-    width: 10%; /* Stel de breedte in, zodat er meerdere producten per rij passen */
+    width: 10%; 
     margin: 10px;
     padding: 10px;
     
@@ -124,27 +124,27 @@ header{
         display: block;
 }
 
-/* Stijlen voor de navigatiebalk */
+
 nav {
     background-color: #333;
     color: #fff;
     padding: 10px;
 }
 
-/* Stijlen voor de navigatiebalk-items */
+
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-/* Stijlen voor de winkelmandje-container */
+
 .cart-container {
     display: flex;
     align-items: center;
 }
 
-/* Stijlen voor het winkelmandje-icoon */
+
 .cart-icon {
     font-size: 24px;
     margin-right: 10px;

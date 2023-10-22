@@ -1,11 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using FrituurApp.Models;
 using Microsoft.AspNetCore.Identity;
+using FrituurApp.Data;
 
 namespace FrituurApp.Controllers
 {       
     public class AccountController : Controller
-    {   
+    {
         private readonly UserManager<Customer> _userManager;
         private readonly SignInManager<Customer> _signInManager;
         public AccountController(UserManager<Customer> userManager, 
@@ -50,7 +51,7 @@ namespace FrituurApp.Controllers
                 var user = new Customer()
                 {
                     CustomerName = register.CustomerName,
-                    CustomerEmail = register.CustomerEmail,
+                    CustomerEmail = register.CustomerEmail
                 };
                 var result = await _userManager.CreateAsync(user, register.CustomerPassword);
                 if (result.Succeeded)
